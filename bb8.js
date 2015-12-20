@@ -2,9 +2,15 @@ var Cylon = require('cylon');
 var color = require('onecolor');
 var config = require('./config.js');
 
-if(config.uuid === "cb157b931d5a4066bdc73de6080b794b"){
+if(config.uuid === "insert uuid here"){
   console.log('please identify the bluetooth uuid of your sphero, see the readme!');
   return;
+}
+
+var log = function(){
+  if(config.debugger){
+    console.log(arguments[0],arguments[1],arguments[2]);
+  }
 }
 
 Cylon.robot({
@@ -27,13 +33,13 @@ Cylon.robot({
       var k = l;
       return function(){
         var colour = parseInt(color('hsl(' + Math.ceil(i/l * 360) + ', 80%, 70%)').hex().slice(1), 16)
-        console.log(j, colour.toString(16));
+        log(j, colour.toString(16));
         my.ollie.setRGB(colour);
       };
     };
 
     my.ollie.wake(function(err, data){
-      console.log("wake");
+      log("wake");
       for(var i = 1, l = 360; i < l; ++i ){
         after((i * 20) + 500, set_colour(i,l));
       }
