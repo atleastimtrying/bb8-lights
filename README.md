@@ -5,6 +5,8 @@ The majority of the setup of this project was from this excellent gist by @jaksw
 
 https://gist.github.com/jakswa/6d607ceb130ace7f3d0c
 
+*This project is not endorsed by sphero, it hasn't broken mine but use this at your own risk!*
+
 ## Setup
 
 ```
@@ -41,6 +43,8 @@ module.exports = {
 ```
 
 Then run `node bb8.js`!
+
+To stop it for now just use `ctrl + c`
 
 ## What next?
 
