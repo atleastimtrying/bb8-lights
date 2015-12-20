@@ -1,0 +1,25 @@
+{
+  "name": "bb8-lights",
+  "version": "0.0.2",
+  "description": "Playing with the lights on sphero bb8 via clyon.js",
+  "main": "bb8.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bb8",
+    "sphero",
+    "lights",
+    "colours",
+    "hues"
+  ],
+  "author": "Anders Fisher",
+  "repository": "https://github.com/atleastimtrying/bb8-lights",
+  "license": "MIT",
+  "dependencies": {
+    "cylon": "^1.2.0",
+    "cylon-ble": "^0.8.0",
+    "cylon-ollie": "^0.8.0",
+    "cylon-sphero": "^0.23.0"
+  }
+}
