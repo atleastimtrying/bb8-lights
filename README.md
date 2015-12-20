@@ -11,7 +11,9 @@ https://gist.github.com/jakswa/6d607ceb130ace7f3d0c
 cd bb8-lights
 npm install
 ```
+
 First scan for your BB8 (the device name should contain BB in it, you may have ot run this twice):
+
 ```
 > sudo cylon-ble-scan
 [...]
@@ -21,9 +23,25 @@ Peripheral discovered!
   rssi: -63
 
 ```
-Then take its UUID and assign it to `uuid` in the config.js file
+
+Create a new config.js file
+
+```
+> mv sample-config.js config.js
+```
+
+Then take the UUID and assign it to `uuid` in your new config.js file (mine is below for an example).
+
+```
+module.exports = {
+  uuid: "cb157b931d5a4066bdc73de6080b794b",
+  debugger: true
+};
+
+```
 
 Then run `node bb8.js`!
 
 ## What next?
+
 I'd like to incorperate some more interesting colourschemes and possibly include some reaction to the accelerometer readings.
