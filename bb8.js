@@ -1,11 +1,17 @@
 var Cylon = require('cylon');
 var color = require('onecolor');
+var config = require('./config.js');
+
+if(config.uuid === "cb157b931d5a4066bdc73de6080b794b"){
+  console.log('please identify the bluetooth uuid of your sphero, see the readme!');
+  return;
+}
 
 Cylon.robot({
   connections: {
     bluetooth: { 
       adaptor: 'central',
-      uuid: 'cb157b931d5a4066bdc73de6080b794b', 
+      uuid: config.uuid, 
       module: 'cylon-ble'
     }
   },
