@@ -20,6 +20,7 @@
     "cylon": "^1.2.0",
     "cylon-ble": "^0.8.0",
     "cylon-ollie": "^0.8.0",
-    "cylon-sphero": "^0.23.0"
+    "cylon-sphero": "^0.23.0",
+    "onecolor": "^2.5.0"
   }
 }
