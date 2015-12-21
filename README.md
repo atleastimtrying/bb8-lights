@@ -44,7 +44,7 @@ module.exports = {
 
 Then run `node bb8.js`!
 
-To stop it for now just use `ctrl + c`
+The script ends using `process.exit()` when the colours have finished looping.
 
 ## What next?
 
