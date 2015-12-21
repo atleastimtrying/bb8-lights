@@ -9,7 +9,7 @@ if(config.uuid === "insert uuid here"){
 
 var log = function(){
   if(config.debugger){
-    console.log(arguments[0],arguments[1],arguments[2]);
+    console.log(arguments);
   }
 }
 
@@ -35,6 +35,10 @@ Cylon.robot({
         var colour = parseInt(color('hsl(' + Math.ceil(i/l * 360) + ', 80%, 70%)').hex().slice(1), 16)
         log(j, colour.toString(16));
         my.ollie.setRGB(colour);
+        if(i === l - 1){
+          log('END OF RUN');
+          process.exit();
+        }
       };
     };
 
